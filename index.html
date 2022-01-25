@@ -1,0 +1,488 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <title>Ex 100km challenge</title>
+  </head>
+
+  <body>
+    <div class="modal">
+      <div class="content">
+        <img class="close" src="./assets/icons/close.svg" alt="close modal">
+        <div class="text-center">
+        <p class="title">Dove usi l'auto?</p>
+        <p class="description">
+          Utilizza i <b>cursori</b> per modificare le percentuali
+          relative al tipo di percorso che fai abitualmente, una volta impostati
+          i valori clicca su <b>Ricalcola</b></p>
+          <div class="stat-cards">
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <header class="flex">
+      <div class="logo">
+        <div class="left">Q</div>
+        <div class="right flex">
+          <span>PREMIUM</span>
+          <div class="bullets">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+      <div class="menu flex">
+        <span class="menu-title">MENU</span>
+        <div class="hamburger">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </header>
+    <div class="content">
+      <div class="upper-content flex">
+        <div class="left flex">
+          <div class="logo ex100km flex primary-color">
+            <div class="euro">
+              <div>&euro;</div>
+              <span>x</span>
+            </div>
+            <div class="flex km100">
+              <span>100</span>
+              <span>KM</span>
+            </div>
+          </div>
+          <p class="description">
+            I costi chilometrici relativi alle auto provate dal 2016 ad oggi.
+            <a href="#">Più informazioni</a>
+          </p>
+          <div class="open-modal flex">
+            <img src="./assets/icons/openmodal.svg" alt="open modal" />
+            <span>Prezzi aggiornati al 08/06/2021</span>
+          </div>
+        </div>
+
+        <div class="right stats flex">
+          <p class="title">Costi calcolati su queste percentuali di utilizzo</p>
+          <div class="cards">
+            <div class="card">
+              <div>
+                <span class="percent">33</span>
+                <span class="percent-sign">%</span>
+              </div>
+            </div>
+            <div class="card"></div>
+            <div class="card"></div>
+          </div>
+        </div>
+      </div>
+      <div class="lower-content flex">
+        <div class="left flex">
+          <div class="filter">
+            <img src="./assets/icons/sliders.svg" alt="slider" />
+            <span>Filtra auto</span>
+          </div>
+          <div class="fascia categories">
+            <div class="title">
+              <span>fascia di costo 100 km</span>
+              <img src="./assets/icons/chevron-down.svg" alt="collapse" />
+            </div>
+            <!-- CODE FOR GRAPH -->
+          </div>
+          <hr />
+          <div class="alimentazone categories">
+            <div class="title">
+              <span>ALIMENTAZIONE</span>
+              <img src="./assets/icons/chevron-down.svg" alt="collapse" />
+            </div>
+            <div class="content">
+              <div><input type="checkbox" /><span>Tutte</span></div>
+              <div><input type="checkbox" /><span>Benzina (123)</span></div>
+              <div><input type="checkbox" /><span>Gasolio (71)</span></div>
+              <div>
+                <input type="checkbox" /><span>Mild Hybrid Benzina (21)</span>
+              </div>
+              <div>
+                <input type="checkbox" /><span>Mild Hybrid Diesel (5)</span>
+              </div>
+              <div><input type="checkbox" /><span>Full Hybrid (15)</span></div>
+              <div>
+                <input type="checkbox" /><span>Plug-in Hybrid (34)</span>
+              </div>
+              <div><input type="checkbox" /><span>Electtrica (34)</span></div>
+              <div><input type="checkbox" /><span>GPL (6)</span></div>
+              <div><input type="checkbox" /><span>Metano (6)</span></div>
+            </div>
+          </div>
+          <hr />
+          <div class="tipo-auto categories">
+            <div class="title">
+              <span>TIPO AUTO</span>
+              <img src="./assets/icons/chevron-down.svg" alt="collapse" />
+            </div>
+            <div class="content two-cols">
+              <div><input type="checkbox" /><span>Tutte</span></div>
+              <div><input type="checkbox" /><span>Coupe</span></div>
+              <div><input type="checkbox" /><span>City Car</span></div>
+              <div><input type="checkbox" /><span>Station wagon</span></div>
+              <div><input type="checkbox" /><span>Berlina</span></div>
+              <div><input type="checkbox" /><span>Monovolume</span></div>
+              <div><input type="checkbox" /><span>Cabrio</span></div>
+              <div><input type="checkbox" /><span>Suv/Fluoristrada</span></div>
+            </div>
+          </div>
+          <hr />
+          <div class="marca categories">
+            <div class="title">
+              <span>MARCA</span>
+              <img src="./assets/icons/chevron-down.svg" alt="collapse" />
+            </div>
+            <div class="content two-cols">
+              <div><input type="checkbox" /><span>Tutte</span></div>
+              <div><input type="checkbox" /><span>Mahindra</span></div>
+              <div><input type="checkbox" /><span>Alfa Romeo</span></div>
+              <div><input type="checkbox" /><span>Mazda</span></div>
+              <div><input type="checkbox" /><span>Alpine</span></div>
+              <div><input type="checkbox" /><span>Mercedes</span></div>
+              <div><input type="checkbox" /><span>Aston Martin</span></div>
+              <div><input type="checkbox" /><span>Mg</span></div>
+              <div><input type="checkbox" /><span>Audi</span></div>
+              <div><input type="checkbox" /><span>Mini</span></div>
+              <div><input type="checkbox" /><span>Bmw</span></div>
+              <div><input type="checkbox" /><span>Mitsubishi</span></div>
+              <div><input type="checkbox" /><span>Citroen</span></div>
+              <div><input type="checkbox" /><span>Nissan</span></div>
+              <div><input type="checkbox" /><span>Cupra</span></div>
+              <div><input type="checkbox" /><span>Opel</span></div>
+              <div><input type="checkbox" /><span>Dacia</span></div>
+              <div><input type="checkbox" /><span>Peugeot</span></div>
+              <div><input type="checkbox" /><span>Ds</span></div>
+              <div><input type="checkbox" /><span>Porsche</span></div>
+              <div><input type="checkbox" /><span>Dr</span></div>
+              <div><input type="checkbox" /><span>Renault</span></div>
+              <div><input type="checkbox" /><span>Fiat</span></div>
+              <div><input type="checkbox" /><span>Seat</span></div>
+              <div><input type="checkbox" /><span>Ford</span></div>
+              <div><input type="checkbox" /><span>Skoda</span></div>
+              <div><input type="checkbox" /><span>Honda</span></div>
+              <div><input type="checkbox" /><span>Ssangyong</span></div>
+              <div><input type="checkbox" /><span>Hyundai</span></div>
+              <div><input type="checkbox" /><span>Subaru</span></div>
+              <div><input type="checkbox" /><span>Jaguar</span></div>
+              <div><input type="checkbox" /><span>Suzuki</span></div>
+              <div><input type="checkbox" /><span>Jeep</span></div>
+              <div><input type="checkbox" /><span>Toyota</span></div>
+              <div><input type="checkbox" /><span>Kia</span></div>
+              <div><input type="checkbox" /><span>Tesla</span></div>
+              <div><input type="checkbox" /><span>Lancia</span></div>
+              <div><input type="checkbox" /><span>Volkswagen</span></div>
+              <div><input type="checkbox" /><span>Land Rover</span></div>
+              <div><input type="checkbox" /><span>Volvo</span></div>
+              <div><input type="checkbox" /><span>Lexus</span></div>
+              <div><input type="checkbox" /><span>Xev</span></div>
+            </div>
+          </div>
+          <hr />
+        </div>
+        <div class="right flex">
+          <div class="order-by flex">
+            <span>Ordinar per</span>
+            <span class="order-by-option selected">Costo</span>
+            <span class="order-by-option">Potenza</span>
+            <span class="order-by-option">Cilindrata</span>
+            <span class="order-by-option">Marca</span>
+          </div>
+          <hr />
+          <div class="car flex">
+            <img
+              class="car-image"
+              src="./assets/images/volkswagen-eco-up.png"
+              alt="car"
+            />
+            <div class="car-description flex">
+              <span class="car-title">
+                <b>VOLKSWAGEN ECO UP!</b> move 5 porte
+              </span>
+              <div class="details flex">
+                <div class="left flex">
+                  <span class="title">Tipo: <b>Berlina</b></span>
+                  <span class="title">Potenza: <b>150</b>CV | 110kw</span>
+                  <span class="title"
+                    >Cilindrata: <b>1395</b> cm<sup>3</sup></span
+                  >
+                </div>
+                <span class="right-box blue">GPL</span>
+              </div>
+              <div class="kilometers">
+                <div class="rate-in-numbers flex">
+                  <span>
+                    <b class="blue rate-in-km">3,85</b> €x100km per le tue
+                    abitudini
+                  </span>
+                  <img
+                    src="./assets/icons/info.svg"
+                    alt="info"
+                    title="Prezzo unita"
+                  />
+                </div>
+                <div class="bar-rate blue"></div>
+              </div>
+            </div>
+          </div>
+          <div class="car flex">
+            <img
+              class="car-image"
+              src="./assets/images/ford-fiesta.webp"
+              alt="car"
+            />
+            <div class="car-description flex">
+              <span class="car-title">
+                <b>FORD FIESTA</b> 1.1 75 CV Gpl 5 porte
+              </span>
+              <div class="details flex">
+                <div class="left flex">
+                  <span class="title">Tipo: <b>Berlina</b></span>
+                  <span class="title">Potenza: <b>150</b>CV | 110kw</span>
+                  <span class="title"
+                    >Cilindrata: <b>1395</b> cm<sup>3</sup></span
+                  >
+                </div>
+                <span class="right-box blue">GPL</span>
+              </div>
+              <div class="kilometers">
+                <div class="rate-in-numbers flex">
+                  <span> <b class="blue rate-in-km">4,96</b> €x100km </span>
+                  <img
+                    src="./assets/icons/info.svg"
+                    alt="info"
+                    title="Prezzo unita"
+                  />
+                </div>
+                <div class="bar-rate blue"></div>
+              </div>
+            </div>
+          </div>
+          <div class="car flex">
+            <img
+              class="car-image"
+              src="./assets/images/hyundai-ioniq.jpg"
+              alt="car"
+            />
+            <div class="car-description flex">
+              <span class="car-title">
+                <b>HYUNDAI IONIQ</b> ELECTRIC EV 38.3 kWh
+              </span>
+              <div class="details flex">
+                <div class="left flex">
+                  <span class="title">Tipo: <b>Berlina</b></span>
+                  <span class="title">Potenza: <b>150</b>CV | 110kw</span>
+                </div>
+                <span class="right-box light-blue">ELECTTRICA</span>
+              </div>
+              <div class="kilometers">
+                <div class="rate-in-numbers flex">
+                  <span>
+                    <b class="light-blue rate-in-km">3,40</b> €x100km - ricarica
+                    domestica</span
+                  >
+                  <img
+                    src="./assets/icons/info.svg"
+                    alt="info"
+                    title="Prezzo unita"
+                  />
+                </div>
+                <div class="bar-rate light-blue"></div>
+              </div>
+              <div class="kilometers">
+                <div class="rate-in-numbers flex">
+                  <span>
+                    <b class="lighter-blue rate-in-km">8,54</b> €x100km - col.
+                    corrente continua</span
+                  >
+                  <img
+                    src="./assets/icons/info.svg"
+                    alt="info"
+                    title="Prezzo unita"
+                  />
+                </div>
+                <div class="bar-rate lighter-blue"></div>
+              </div>
+            </div>
+          </div>
+          <div class="car flex">
+            <img
+              class="car-image"
+              src="./assets/images/toyota-prius-plugin.png"
+              alt="car"
+            />
+            <div class="car-description flex">
+              <span class="car-title">
+                <b>TOYOTA PRIUS</b> plug-in Hybrid
+              </span>
+              <div class="details flex">
+                <div class="left flex">
+                  <span class="title">Tipo: <b>Berlina</b></span>
+                  <span class="title">Potenza: <b>150</b>CV | 110kw</span>
+                  <span class="title"
+                    >Cilindrata: <b>1395</b> cm<sup>3</sup></span
+                  >
+                </div>
+                <span class="right-box green">PLUG-IN HYBRID</span>
+              </div>
+              <div class="kilometers">
+                <div class="rate-in-numbers flex">
+                  <span>
+                    <b class="green rate-in-km">6,97</b> €x100km ricarica
+                    domestica</span
+                  >
+                  <img
+                    src="./assets/icons/info.svg"
+                    alt="info"
+                    title="Prezzo unita"
+                  />
+                </div>
+                <div class="bar-rate green"></div>
+              </div>
+              <div class="kilometers">
+                <div class="rate-in-numbers flex">
+                  <span>
+                    <b class="light-green rate-in-km">8,54</b> €x100km col cor.
+                    alternata</span
+                  >
+                  <img
+                    src="./assets/icons/info.svg"
+                    alt="info"
+                    title="Prezzo unita"
+                  />
+                </div>
+                <div class="bar-rate light-green"></div>
+              </div>
+            </div>
+          </div>
+          <div class="car flex">
+            <img
+              class="car-image"
+              src="./assets/images/toyota-prius.jpg"
+              alt="car"
+            />
+            <div class="car-description flex">
+              <span class="car-title">
+                <b>VOLKSWAGEN ECO UP!</b> move 5 porte
+              </span>
+              <div class="details flex">
+                <div class="left flex">
+                  <span class="title">Tipo: <b>Berlina</b></span>
+                  <span class="title">Potenza: <b>150</b>CV | 110kw</span>
+                  <span class="title"
+                    >Cilindrata: <b>1395</b> cm<sup>3</sup></span
+                  >
+                </div>
+                <span class="right-box green">FULL HYBRID</span>
+              </div>
+              <div class="kilometers">
+                <div class="rate-in-numbers flex">
+                  <span> <b class="green rate-in-km">6,97</b> €x100km </span>
+                  <img
+                    src="./assets/icons/info.svg"
+                    alt="info"
+                    title="Prezzo unita"
+                  />
+                </div>
+                <div class="bar-rate green"></div>
+              </div>
+            </div>
+          </div>
+          <div class="car flex">
+            <img
+              class="car-image"
+              src="./assets/images/aygo-connect.jfif"
+              alt="car"
+            />
+            <div class="car-description flex">
+              <span class="car-title">
+                <b>VOLKSWAGEN ECO UP!</b> move 5 porte
+              </span>
+              <div class="details flex">
+                <div class="left flex">
+                  <span class="title">Tipo: <b>Berlina</b></span>
+                  <span class="title">Potenza: <b>150</b>CV | 110kw</span>
+                  <span class="title"
+                    >Cilindrata: <b>1395</b> cm<sup>3</sup></span
+                  >
+                </div>
+                <span class="right-box red">BENZINA</span>
+              </div>
+              <div class="kilometers">
+                <div class="rate-in-numbers flex">
+                  <span> <b class="red rate-in-km">8,54</b> €x100km </span>
+                  <img
+                    src="./assets/icons/info.svg"
+                    alt="info"
+                    title="Prezzo unita"
+                  />
+                </div>
+                <div class="bar-rate red"></div>
+              </div>
+            </div>
+          </div>
+          <div class="load-more bg-primary">CARICA ALTRE AUTO</div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="flex upper">
+        <p class="flex">
+          <b>QUATTRORUOTE</b>
+          <span>Sitemap | Contatti | Redazione</span>
+        </p>
+        <div class="social-contacts">
+          <a href="#"
+            ><img src="./assets/icons/youtube-brands.svg" alt="youtube"
+          /></a>
+          <a href="#"
+            ><img src="./assets/icons/facebook-brands.svg" alt="facebook"
+          /></a>
+          <a href="#"
+            ><img src="./assets/icons/twitter-brands.svg" alt="twitter"
+          /></a>
+          <a href="#"
+            ><img src="./assets/icons/instagram-brands.svg" alt="instagram"
+          /></a>
+          <a href="#"><img src="./assets/icons/rss-solid.svg" alt="rss" /></a>
+        </div>
+      </div>
+      <hr />
+      <div class="lower">
+        <p>
+          Editoriale Domus SpA Via G. Mazzocchi, 1/3 20089 Rozzano (Mi) - Codice
+          fiscale, partita IVA e iscrizione al Registro delle Imprese di Milano
+          n. 07835550158 R.E.A. di Milano n. 1186124 - Capitale sociale versato
+          € 5.000.000,00 - Tutti i diritti riservati - All rights reserved -
+          Informativa Privacy - Informativa Cookie completa - Lic. SIAE n.
+          4653/I/908
+        </p>
+      </div>
+    </footer>
+    <script src="./scripts/index.js"></script>
+  </body>
+</html>
