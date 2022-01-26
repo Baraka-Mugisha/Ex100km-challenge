@@ -36,34 +36,42 @@
             tipo di percorso che fai abitualmente, una volta impostati i valori
             clicca su <b>Ricalcola</b>
           </p>
-          <div class="stat-cards cards flex">
-            <div class="colored-bars flex">
-              <div></div>
-              <div></div>
-              <div></div>
+          <div class="body-container flex">
+            <div class="body-content flex">
+
+              <div class="colored-bars flex">
+                <div></div>
+                <div></div>
+                <div></div>
             </div>
-            <div class="card flex">
-              <div class="stat flex">
-                <span class="percent">33</span>
-                <span class="percent-sign">%</span>
+            <div class="stat-cards cards flex">
+              <div class="card flex">
+                <div class="stat flex">
+                  <span class="percent">33</span>
+                  <span class="percent-sign">%</span>
+                </div>
+                <b>CITTA</b>
               </div>
-              <b>CITTA</b>
-            </div>
-            <div class="card flex">
-              <div class="stat flex">
-                <span class="percent">33</span>
-                <span class="percent-sign">%</span>
+              <div class="card flex">
+                <div class="stat flex">
+                  <span class="percent">33</span>
+                  <span class="percent-sign">%</span>
+                </div>
+                <b>STATALE</b>
               </div>
-              <b>STATALE</b>
-            </div>
-            <div class="card flex">
-              <div class="stat flex">
-                <span class="percent">33</span>
-                <span class="percent-sign">%</span>
+              <div class="card flex">
+                <div class="stat flex">
+                  <span class="percent">33</span>
+                  <span class="percent-sign">%</span>
+                </div>
+                <b>AUTOSTRADA</b>
               </div>
-              <bp>AUTOSTRADA</b>
             </div>
+            <div id="closebtn" class="recalculate">Ricalcola</div>
+            </div>
+            
           </div>
+          
         </div>
       </div>
     </div>
@@ -134,7 +142,7 @@
                 <span class="percent">33</span>
                 <span class="percent-sign">%</span>
               </div>
-              <bp>AUTOSTRADA</b>
+              <b>AUTOSTRADA</b>
             </div>
           </div>
           <div class="colored-bars flex">
@@ -535,11 +543,16 @@
     <script>
       var modal = document.getElementById("modal");
       var openBtn = document.getElementById("open-modal");
-      var closeBtn = document.getElementById("close-modal");
+      var closeBtn = document.getElementById("closebtn");
+      var closeImg = document.getElementById("close-modal");
+
       openBtn.onclick = function () {
         modal.style.display = "block";
       };
       closeBtn.onclick = function () {
+        modal.style.display = "none";
+      };
+      closeImg.onclick = function () {
         modal.style.display = "none";
       };
       window.onclick = function (event) {
