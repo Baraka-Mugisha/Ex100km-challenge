@@ -22,17 +22,47 @@
   </head>
 
   <body>
-    <div class="modal">
+    <div id="modal">
       <div class="content">
-        <img class="close" src="./assets/icons/close.svg" alt="close modal">
+        <img
+          id="close-modal"
+          src="./assets/icons/close.svg"
+          alt="close modal"
+        />
         <div class="text-center">
-        <p class="title">Dove usi l'auto?</p>
-        <p class="description">
-          Utilizza i <b>cursori</b> per modificare le percentuali
-          relative al tipo di percorso che fai abitualmente, una volta impostati
-          i valori clicca su <b>Ricalcola</b></p>
-          <div class="stat-cards">
-
+          <p class="title">Dove usi l'auto?</p>
+          <p class="description">
+            Utilizza i <b>cursori</b> per modificare le percentuali relative al
+            tipo di percorso che fai abitualmente, una volta impostati i valori
+            clicca su <b>Ricalcola</b>
+          </p>
+          <div class="stat-cards cards flex">
+            <div class="colored-bars flex">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+            <div class="card flex">
+              <div class="stat flex">
+                <span class="percent">33</span>
+                <span class="percent-sign">%</span>
+              </div>
+              <b>CITTA</b>
+            </div>
+            <div class="card flex">
+              <div class="stat flex">
+                <span class="percent">33</span>
+                <span class="percent-sign">%</span>
+              </div>
+              <b>STATALE</b>
+            </div>
+            <div class="card flex">
+              <div class="stat flex">
+                <span class="percent">33</span>
+                <span class="percent-sign">%</span>
+              </div>
+              <bp>AUTOSTRADA</b>
+            </div>
           </div>
         </div>
       </div>
@@ -84,16 +114,35 @@
 
         <div class="right stats flex">
           <p class="title">Costi calcolati su queste percentuali di utilizzo</p>
-          <div class="cards">
-            <div class="card">
-              <div>
+          <div class="cards flex">
+            <div class="card flex">
+              <div class="stat flex">
                 <span class="percent">33</span>
                 <span class="percent-sign">%</span>
               </div>
+              <b>CITTA</b>
             </div>
-            <div class="card"></div>
-            <div class="card"></div>
+            <div class="card flex">
+              <div class="stat flex">
+                <span class="percent">33</span>
+                <span class="percent-sign">%</span>
+              </div>
+              <b>STATALE</b>
+            </div>
+            <div class="card flex">
+              <div class="stat flex">
+                <span class="percent">33</span>
+                <span class="percent-sign">%</span>
+              </div>
+              <bp>AUTOSTRADA</b>
+            </div>
           </div>
+          <div class="colored-bars flex">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <div id="open-modal">Cambia percentuali</div>
         </div>
       </div>
       <div class="lower-content flex">
@@ -483,6 +532,21 @@
         </p>
       </div>
     </footer>
-    <script src="./scripts/index.js"></script>
+    <script>
+      var modal = document.getElementById("modal");
+      var openBtn = document.getElementById("open-modal");
+      var closeBtn = document.getElementById("close-modal");
+      openBtn.onclick = function () {
+        modal.style.display = "block";
+      };
+      closeBtn.onclick = function () {
+        modal.style.display = "none";
+      };
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
+    </script>
   </body>
 </html>
